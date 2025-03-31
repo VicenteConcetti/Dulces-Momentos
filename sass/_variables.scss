@@ -1,0 +1,15 @@
+$color-title: #853d69;
+$color-gris: #292827;
+$color-blanco: white;
+$tamanio-espaciado-superchico: 15px;
+$tamanio-espaciado-chico: 20px;
+$posicion: center;
+
+/*Mapa de Flexbox Alieaciones */
+$flexbox-alineacion: (
+    "centro": center,
+    "espacio-entre": space-between,
+    "espacio-alrededor": space-around,
+    "espacio-interno": space-evenly,
+    "flex-start": flex-start,
+    "flex-end": flex-end,);

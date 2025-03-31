@@ -1,0 +1,54 @@
+/* Estilos comunes para header y footer */
+header, footer {
+    background-color: #323232;
+    padding: 10px $tamanio-espaciado-chico;
+    border-radius: 10px;
+    justify-content: map-get($flexbox-alineacion,espacio-entre );
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    a {
+      color: $color-blanco;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      &:hover {
+        color: #a22d56;
+      }
+    }
+    p, h3, i {
+      color: $color-blanco;
+    }
+    i {
+      font-size: 2rem;
+    }
+  }
+header .fa-whatsapp, footer .fa-whatsapp {
+  color: #25d366;
+  font-size: 3rem;
+  position: fixed;
+  right: $tamanio-espaciado-chico;
+  bottom: 30px;
+}
+@media (max-width: 768px) {
+    header, footer {
+      padding: 10px 15px;
+      text-align: map-get($flexbox-alineacion, centro );
+    }
+  
+    header .fa-whatsapp, 
+    footer .fa-whatsapp {
+      font-size: 2.5rem;
+      right: 15px;
+      bottom: 20px;
+    }
+  
+    header ul, footer ul {
+      padding: 0;
+      text-align: map-get($flexbox-alineacion, centro );
+    }
+  
+    header a, footer a {
+      font-size: 0.9rem;
+    }
+  }

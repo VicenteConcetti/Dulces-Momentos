@@ -1,0 +1,122 @@
+/* Valores generales */
+
+.tituloprincipal{
+    h1{
+      font-size: 2.5rem;
+      color: $color-title;
+      margin: $tamanio-espaciado-chico 0 30px 0;
+      text-align: $posicion;
+      margin-bottom: $tamanio-espaciado-chico;
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+.sucursales .contact-section.video{
+    h2{
+      font-size: 1.2rem;
+      color: $color-gris;
+      margin: $tamanio-espaciado-chico 0 30px 0;
+      text-align: $posicion;
+      margin-bottom: $tamanio-espaciado-chico;
+  
+    }
+}
+
+.negrita {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+.boton {
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    color: $color-blanco;
+    border: 1px solid $color-blanco;
+    &:hover {
+      box-shadow: 3px -2px 38px 14px rgba(255, 255, 255, 0.717);
+      border: initial;
+      border-radius: 5px;
+    }
+  }
+  .redessocialesIndex {
+    text-align: $posicion;
+  }
+  .contacto {
+    P {
+      font-size: 0.5rem;
+    }
+  }
+  
+  /* Media Queries para dispositivos pequeños (teléfonos) */
+@media screen and (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    .boton {
+      padding: 8px;
+    }
+    header, footer {
+      padding: 8px $tamanio-espaciado-superchico;
+    }
+    .seccionSucursalesIndex {
+      height: auto;
+      padding: $tamanio-espaciado-chico;
+    }
+    .opinion-card img {
+      width: 80px;
+      height: 80px;
+    }
+    .fa-whatsapp {
+      font-size: 2.5rem;
+      right: 10px;
+      bottom: $tamanio-espaciado-chico;
+    }
+  }
+/* Media Queries para tablets y dispositivos medianos */
+@media screen and (max-width: 768px) {
+    body {
+      padding: 12px;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    .seccionSucursalesIndex {
+      height: auto;
+      padding: 30px;
+    }
+    .opinion-card img {
+      width: 90px;
+      height: 90px;
+    }
+    .fa-whatsapp {
+      font-size: 3rem;
+      right: $tamanio-espaciado-superchico;
+      bottom: 25px;
+    }
+  }
+  
+/* Media Queries para laptops y dispositivos grandes */
+@media screen and (max-width: 1200px) {
+    body {
+      padding: $tamanio-espaciado-superchico;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .seccionSucursalesIndex {
+      height: 85vh;
+    }
+    .opinion-card img {
+      width: 100px;
+      height: 100px;
+    }
+    .fa-whatsapp {
+      font-size: 3rem;
+      right: $tamanio-espaciado-chico;
+      bottom: 30px;
+    }
+  }

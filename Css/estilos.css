@@ -1,136 +1,291 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/*Mapa de Flexbox Alieaciones */
+/* Reset y configuraciones generales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
- font-family: Arial, sans-serif;
- background-color: #f7f7f7;
- color: #4d4d4d;
 
-.navbar-dark {
-  background-color: #f6aafd !important;
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 15px;
+  background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #a7a7a7 100%);
 }
 
-.navbar-brand img{
-  border-radius: 50%;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #691a36; /* Cambiar el color al pasar el ratón */
-}
-
-.navbar-brand img {
-  transition: transform 0.3s ease; /* Efecto de transformación suave */
-}
-
-.navbar-brand img:hover {
-  transform: scale(1.05); /* Aumentar el tamaño del logo al pasar el ratón */
-}
-
-.img-logo {
-  padding: 20px;
-  max-height: 120px;
-}
-
-
-
-/*Estilos del carousel*/
-.img-carousel {
-  max-width: 250px; /* Ancho máximo */
-  max-height: 200px; /* Altura máxima */
-  object-fit: cover; /* Mantiene la proporción sin deformar */
-}
-
-/* Estilos de los productos */
-.productos {
-  background-color: #fff;
-  padding: 50px 0;
-}
-
-h2 {
+/* Valores generales */
+.tituloprincipal h1 {
   font-size: 2.5rem;
+  color: #853d69;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  margin-bottom: 20px;
   font-weight: bold;
-  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sucursales .contact-section.video h2 {
+  font-size: 1.2rem;
+  color: #292827;
+  margin: 20px 0 30px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.negrita {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.boton {
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  border: 1px solid white;
+}
+.boton:hover {
+  box-shadow: 3px -2px 38px 14px rgba(255, 255, 255, 0.717);
+  border: initial;
+  border-radius: 5px;
+}
+
+.redessocialesIndex {
+  text-align: center;
+}
+
+/* Media Queries para dispositivos pequeños (teléfonos) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .boton {
+    padding: 8px;
+  }
+  header, footer {
+    padding: 8px 15px;
+  }
+  .seccionSucursalesIndex {
+    height: auto;
+    padding: 20px;
+  }
+  .opinion-card img {
+    width: 80px;
+    height: 80px;
+  }
+  .fa-whatsapp {
+    font-size: 2.5rem;
+    right: 10px;
+    bottom: 20px;
+  }
+}
+/* Media Queries para tablets y dispositivos medianos */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .seccionSucursalesIndex {
+    height: auto;
+    padding: 30px;
+  }
+  .opinion-card img {
+    width: 90px;
+    height: 90px;
+  }
+  .fa-whatsapp {
+    font-size: 3rem;
+    right: 15px;
+    bottom: 25px;
+  }
+}
+/* Media Queries para laptops y dispositivos grandes */
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 15px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .seccionSucursalesIndex {
+    height: 85vh;
+  }
+  .opinion-card img {
+    width: 100px;
+    height: 100px;
+  }
+  .fa-whatsapp {
+    font-size: 3rem;
+    right: 20px;
+    bottom: 30px;
+  }
+}
+/* Estilos comunes para header y footer */
+header, footer {
+  background-color: #323232;
+  padding: 10px 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+header ul, footer ul {
+  list-style: none;
+  padding: 0;
+}
+header a, footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+header a:hover, footer a:hover {
+  color: #a22d56;
+}
+header p, header h3, header i, footer p, footer h3, footer i {
+  color: white;
+}
+header i, footer i {
+  font-size: 2rem;
+}
+
+header .fa-whatsapp, footer .fa-whatsapp {
+  color: #25d366;
+  font-size: 3rem;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  header, footer {
+    padding: 10px 15px;
+    text-align: center;
+  }
+  header .fa-whatsapp,
+  footer .fa-whatsapp {
+    font-size: 2.5rem;
+    right: 15px;
+    bottom: 20px;
+  }
+  header ul, footer ul {
+    padding: 0;
+    text-align: center;
+  }
+  header a, footer a {
+    font-size: 0.9rem;
+  }
+}
+/* Estilos del navbar */
+.navbar-expand-lg .navbar-nav .nav-link {
+  color: white;
+}
+
+/* Estilos del carousel */
+.img-carousel {
+  max-width: 250px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Estilos sección Sucursales */
+.seccionSucursalesIndex {
+  height: 95vh;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/delicious-donut-shop-ai-generated.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  place-content: center;
+}
+.seccionSucursalesIndex h2 {
+  color: white;
+}
+.seccionSucursalesIndex p {
   margin-bottom: 30px;
 }
 
-/*Opiniones de los clientes*/
-.opinion-card {
+@media (max-width: 768px) {
+  .seccionSucursalesIndex {
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    background-attachment: scroll;
+    background-position: center;
+    place-content: center;
+  }
+  .seccionSucursalesIndex h2 {
+    font-size: 1.5rem;
+  }
+  .seccionSucursalesIndex p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
+/* Sección Clientes */
+.seccionClientesIndex .opinion-card {
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
-
-.opinion-card:hover {
+.seccionClientesIndex .opinion-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
-.opinion-card img {
+.seccionClientesIndex .opinion-card img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
 }
-
-.opinion-card h5 {
+.seccionClientesIndex .opinion-card h5 {
   margin-top: 15px;
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-.opinion-card p {
+.seccionClientesIndex .opinion-card p {
   font-style: italic;
   font-size: 0.9rem;
   color: #555;
 }
 
-/* Tarjetas de sucursales */
-.card {
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@media (max-width: 768px) {
+  .seccionClientesIndex .opinion-card {
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .seccionClientesIndex .opinion-card:hover {
+    transform: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .seccionClientesIndex .opinion-card img {
+    width: 80px;
+    height: 80px;
+  }
+  .seccionClientesIndex .opinion-card h5 {
+    font-size: 1rem;
+  }
+  .seccionClientesIndex .opinion-card p {
+    font-size: 0.85rem;
+  }
 }
-
-.card-title {
-  color: #f1f1f1;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.card-header {
-  background-color: #a169a7;
-  color: white;
-  border-radius: 10px 10px 0 0;
-  font-weight: bold;
-}
-
-.card-body {
-  background-color: white;
-  padding: 20px;
-}
-
-/* Estilo para el iframe de Google Maps */
-iframe {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Página Productos */
 .card {
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
-
 .card:hover {
   transform: translateY(-10px);
 }
@@ -145,19 +300,23 @@ iframe {
   background-color: #fff;
   padding: 20px;
   text-align: center;
+  height: fit-content;
 }
 
 .card-title-productos {
   font-size: 1.5rem;
-  font-weight: bold;
   color: #333;
-  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .card-text {
   font-size: 1rem;
-  color: #000000;
-  margin-bottom: 20px;
+  color: #000;
+  font-weight: normal;
+  text-align: justify;
+  letter-spacing: normal;
 }
 
 .price {
@@ -167,57 +326,41 @@ iframe {
   margin-bottom: 20px;
 }
 
-.btn-primary {
-  background-color: #c184c6;
+.btn-bordo {
+  background-color: rgba(151, 151, 151, 0.4039215686);
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+}
+.btn-bordo:hover {
+  background-color: #979797;
 }
 
-.btn-primary:hover {
-  background-color: #7d3d82;
-}
-
-/* Diseño de la cuadrícula */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.col-md-4 {
-  flex: 1;
-  max-width: 33.333%;
-  box-sizing: border-box;
-}
-
-.col-sm-6 {
-  max-width: 50%;
-}/*# sourceMappingURL=estilos.css.map */
-
-footer a{
-color: #fff;
-text-decoration: none;
-}
-footer a:hover{
-  text-decoration: underline;
-}
-footer-title{
-  font-weight: bold;
-  text-transform: uppercase;
-}
-/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-  .col-md-4 {
-    max-width: 100%;
+  .card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .card:hover {
+    transform: none;
   }
   .card-img-top {
-    height: 180px;
+    height: 150px;
   }
-}
-@media (max-width: 576px) {
-  h2 {
-    font-size: 2rem;
+  .card-img-top .card-body {
+    padding: 15px;
+    text-align: center;
   }
-}
+  .card-img-top .card-title-productos {
+    font-size: 1.3rem;
+  }
+  .card-img-top .card-text {
+    font-size: 0.9rem;
+  }
+  .card-img-top .price {
+    font-size: 1.1rem;
+  }
+  .card-img-top .btn-bordo {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,10 @@
+@mixin texto-estilo($size, $color, $weight: normal, $align: left, $spacing: normal) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    text-align: $align;
+    letter-spacing: $spacing;
+  }
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+  }

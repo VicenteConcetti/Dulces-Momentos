@@ -1,0 +1,12 @@
+/* Reset y configuraciones generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: $tamanio-espaciado-superchico;
+  background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #a7a7a7 100%);
+}
