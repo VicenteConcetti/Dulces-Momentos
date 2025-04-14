@@ -16,9 +16,9 @@ body {
 
 /* Valores generales */
 .tituloprincipal h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #853d69;
-  margin: 20px 0 30px 0;
+  margin: 20px 0 20px 0;
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
@@ -53,6 +53,10 @@ body {
 
 .redessocialesIndex {
   text-align: center;
+}
+
+.contacto P {
+  font-size: 0.5rem;
 }
 
 /* Media Queries para dispositivos pequeños (teléfonos) */
@@ -304,7 +308,6 @@ header .fa-whatsapp, footer .fa-whatsapp {
 }
 
 .card-title-productos {
-  font-size: 1.5rem;
   color: #333;
   font-weight: bold;
   text-align: center;
@@ -312,7 +315,6 @@ header .fa-whatsapp, footer .fa-whatsapp {
 }
 
 .card-text {
-  font-size: 1rem;
   color: #000;
   font-weight: normal;
   text-align: justify;
@@ -327,13 +329,18 @@ header .fa-whatsapp, footer .fa-whatsapp {
 }
 
 .btn-bordo {
-  background-color: rgba(151, 151, 151, 0.4039215686);
+  background-color: #800020;
+  color: white;
   border: none;
   padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
   font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 .btn-bordo:hover {
-  background-color: #979797;
+  background-color: #a52a2a;
 }
 
 @media (max-width: 768px) {

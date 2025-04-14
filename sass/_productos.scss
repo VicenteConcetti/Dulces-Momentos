@@ -37,12 +37,17 @@
   }
   
   .btn-bordo {
-    background-color: rgba(151, 151, 151, 0.4039215686);
+    background-color: #800020;
+    color: white;
     border: none;
     padding: 10px $tamanio-espaciado-chico;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
     &:hover {
-      background-color: #979797;
+      background-color: #a52a2a;
     }
   }
 
