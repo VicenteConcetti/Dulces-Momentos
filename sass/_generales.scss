@@ -1,7 +1,33 @@
-/* Valores generales */
+.logo-hover {
+  transition: transform 0.3s ease;
+}
 
-.tituloprincipal{
-    h1{
+.logo-hover:hover {
+  transform: scale(1.1);
+}
+/* Valores generales */
+.titulo-principal {
+  font-family: 'Georgia', serif;
+  font-size: 2.8rem;
+  color: $color-title; /* tono tipo chocolate */
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.titulosecundario{
+    h2{
       font-size: 2.2rem;
       color: $color-title;
       margin: $tamanio-espaciado-chico 0 20px 0;
@@ -11,7 +37,7 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 }
-.sucursales .contact-section.video{
+.contact-section.video{
     h2{
       font-size: 1.2rem;
       color: $color-gris;

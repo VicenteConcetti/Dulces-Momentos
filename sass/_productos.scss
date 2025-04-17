@@ -3,22 +3,32 @@
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
     &:hover {
       transform: translateY(-10px);
     }
   }
   
   .card-img-top {
-    height: 200px;
+    height: 50%;
     object-fit: cover;
-    border-bottom: 2px solid #f1f1f1;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .card-body {
+    height: 50%;
     background-color: #fff;
     padding: $tamanio-espaciado-chico;
     text-align: $posicion;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    flex-grow: 1;
   }
   
   .card-title-productos {
@@ -72,7 +82,11 @@
     }
   
     .card-text {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      color: #7f8c8d;
+      line-height: 1.6; 
+      margin-bottom: 1rem;
+      text-align: justify;
     }
   
     .price {

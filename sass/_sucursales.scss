@@ -1,0 +1,70 @@
+.sucursales {
+    background-color: #f9f9f9; /* Fondo suave para que resalten las tarjetas */
+    padding: 30px 0; /* Un buen espaciado alrededor */
+}
+
+.sucursales h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efecto de elevación cuando se pasa el cursor */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombras más profundas para un efecto flotante */
+}
+
+.card-header {
+    background: linear-gradient(to right, $color-title, #f1faee3f); /* Gradiente atractivo */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 15px;
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-body i {
+    font-size: 1.3rem;
+}
+
+/* Añadir margen en las tarjetas */
+.card-body .fa-lg {
+    margin-right: 10px;
+}
+
+.card-body .text-danger {
+    color: $color-title;
+}
+
+.card-body .text-warning {
+    color: #f1faee;
+}
+
+.card-body .text-success {
+    color: #2a9d8f;
+}
+
+@media (max-width: 767px) {
+    .sucursales h2 {
+        font-size: 1.5rem;
+    }
+}
