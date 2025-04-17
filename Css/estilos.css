@@ -216,6 +216,22 @@ header .fa-whatsapp, footer .fa-whatsapp {
   color: white;
 }
 
+.nav-link.active {
+  position: relative;
+  font-weight: bold;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #853d69;
+  border-radius: 2px;
+}
+
 /* Estilos del carousel */
 .img-carousel {
   max-width: 250px;
